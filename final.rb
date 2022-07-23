@@ -1,37 +1,14 @@
+require_relative "input_validate.rb"
+require_relative "worker.rb"
 
 STARTER = "==================================Calculator=================================="
 ENDER = "=============================================================================="
-MATH_REGEX = /\d+? *?\+ *?\d+?/
-
-module InputValidate
-    class InputValidator
-
-        def check
-            @check = Hash.new
-            print "Enter the equation (only mathematical equation is supported): "
-            user_input = gets.chomp.to_s
-            if user_input =~ MATH_REGEX
-                @check["validated"]=true
-                @check["equation"]=user_input
-            end
-            return @check
-        end
-    end
-
-end
-
-module Calculate
-    class Calculator
-        def initialize(equation)
-            solved_equation = eval(equation)
-            puts equation.to_s + " = " + solved_equation.to_s
-        end
-    end
-end
 
 module InfinityLoop
+
     include InputValidate
     include Calculate
+
     while true
         puts STARTER
         print "Do you want to use calculator [y/n]: "

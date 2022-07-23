@@ -1,4 +1,4 @@
-require_relative "modules.rb"
+require_relative "final.rb"
 
 include Calculate
 include InputValidate
