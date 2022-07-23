@@ -9,7 +9,7 @@ module Calculate
                 puts ENDER
                 puts equation.to_s + " = " + solved_equation.to_s
             rescue SyntaxError => se
-                puts "Wrong Equation Provided"
+                puts "Wrong Equation Provided..."
             end
         end
     end
