@@ -8,7 +8,7 @@ module Calculate
                 solved_equation = eval(equation)
                 puts ENDER
                 puts equation.to_s + " = " + solved_equation.to_s
-            rescue
+            rescue SyntaxError => se
                 puts "Error while processing the given equation..."
             end
         end
