@@ -22,10 +22,13 @@ module InfinityLoop
             else
                 puts "Enter a valid mathematical equation!"
             end
-        else
+        elsif res == 'n' or res == 'N'
             puts "Thanks for using Calculator"
             puts ENDER
             break
+        else
+            puts "Invalid Input!"
+            next
         end
     end
 end
