@@ -10,8 +10,6 @@ module InputValidate
             if user_input =~ MATH_REGEX
                 @check["validated"]=true
                 @check["equation"]=user_input
-            else
-                puts "Not a valid equation! Exiting..."
             end
             return @check
         end
