@@ -1,4 +1,4 @@
-MATH_REGEX = /\s*-?\d+(?:\s*[-\+\*\/]\s*\d+)+/ #/\d+? *?\+ *?\d+?/
+MATH_REGEX = /\s*-?\d+(?:\s*[-\+\*\/]\s*\d+)+/ # old regex = /\d+? *?\+ *?\d+?/
 
 module InputValidate
     class InputValidator
