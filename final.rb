@@ -10,11 +10,13 @@ module InfinityLoop
     include Calculate
 
     while true
+
         puts STARTER
         print "Do you want to use calculator [y/n]: "
         res = gets.chomp.to_s
 
         if res == 'y' or res == 'Y'
+            system("clear")
             validate = InputValidator.new
             user_input = validate.check
             if user_input["validated"] == true
